@@ -1,0 +1,91 @@
+.UP-prompt-superparent{
+	.UP-prompt-fadeOut{
+		z-index: 20000;
+		position: fixed;
+		left: 0px;
+		right: 0px;
+		top: 0px;
+		bottom: 0px;
+		background-color: rgba(0,0,0,0.5);
+	}
+	.UP-prompt-container-outer{
+		position: absolute;
+		left: 0px;
+		right: 0px;
+		bottom: 0px;
+		top: 0px;
+		z-index: 20001;
+		display: table;
+		height: 100%;
+		width: 100%;
+		.UP-prompt-container-inner {
+		    display: table-cell;
+		    vertical-align: middle;
+		    .UP-prompt-container{
+				position: relative;
+				z-index: 20001;
+				width: 80%;
+				max-width: 400px;
+				margin: 0px auto;
+				height: auto;
+				background-color: white;
+				overflow: hidden;
+				.border-radius(3,3,3,3);
+				.UP-prompt-title{
+					padding: 10px 10px 5px 10px;
+					font-size: 1.1em;
+					text-align: center;
+					height: 30px;
+					line-height: 30px;
+					overflow: hidden;
+				}
+				.UP-prompt-msg{
+					padding: 10px 15px;
+					font-size: 0.9em;
+					overflow: hidden;
+				}
+				.UP-prompt-buttons{
+					.UP-prompt-button-opt{
+						padding: 5px;
+						text-align: center;
+						height: 30px;
+						line-height: 30px;
+						.border-radius(3,3,3,3);
+						background-color: green;
+						color: #fff;
+						margin: 6px 0;
+						&.red{
+							background-color: #D33E3E;
+							color: #FFE1E1;
+						}
+						&.blue{
+							background-color: #476FC4;
+							color: #D4E0F8;
+						}
+					}
+					&.double{
+						.UP-prompt-button-opt{
+							width: 40%;
+							&:last-child{
+								float: right;
+								margin-right: 5%;
+							}
+							&:first-child{
+								margin-left: 5%;
+								float: left;
+							}
+						}
+					}
+					&.single{
+						.UP-prompt-button-opt{
+							width: 80%;
+							margin-left:10%;
+							margin-right:10%;
+						}
+					}
+				}
+			}
+		}
+	}
+		
+}
